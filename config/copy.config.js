@@ -1,6 +1,3 @@
-
-console.log("PADAAAAAAAAAAAAAAAAAAAAAAAAAAAA", '{{BUILD}}');
-
 module.exports = {
     // copyAssets: {
     //     src: ['{{SRC}}/assets/**/*'],

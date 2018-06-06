@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <button ion-button (click)="loadevents()"> loadevents </button>
+
+  <p>Display event : {{displayEvent | json}}</p>
+  <div *ngIf="calendarOptions">
+
+    <ng-fullcalendar #ucCalendar [options]="calendarOptions" (eventClick)="eventClick($event.detail)" (eventDrop)="updateEvent($event.detail)"
+      (eventResize)="updateEvent($event.detail)" (dayClick)="dayClick($event.detail)" (clickButton)="clickButton($event.detail)"
+      [(eventsModel)]="events"></ng-fullcalendar>
+
+  </div>
+
+</ion-content>
